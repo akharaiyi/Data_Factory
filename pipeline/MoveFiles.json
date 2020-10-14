@@ -83,6 +83,9 @@
 										"type": "AmazonS3ReadSettings",
 										"recursive": true
 									},
+									"formatSettings": {
+										"type": "BinaryReadSettings"
+									},
 									"recursive": false
 								},
 								"sink": {
@@ -214,7 +217,7 @@
 				"type": "String"
 			},
 			"SourceStore_Directory": {
-				"type": "String"
+				"type": "string"
 			},
 			"DestinationStore_Location": {
 				"type": "String"
