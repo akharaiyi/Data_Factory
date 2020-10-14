@@ -1,0 +1,24 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "adf-ctg"
+		},
+		"ctg_ak_adf_secretAccessKey": {
+			"value": ""
+		},
+		"ctg_move_from_s3_connectionString": {
+			"value": ""
+		},
+		"ctg_ak_adf_properties_typeProperties_accessKeyId": {
+			"value": "AKIAJDWDPZ7ZS4HRC73A"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}

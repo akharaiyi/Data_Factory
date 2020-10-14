@@ -1,0 +1,63 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory name",
+			"defaultValue": "adf-ctg"
+		},
+		"ctg_ak_adf_secretAccessKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'secretAccessKey' of 'ctg_ak_adf'"
+		},
+		"ctg_move_from_s3_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'ctg_move_from_s3'"
+		},
+		"ctg_ak_adf_properties_typeProperties_accessKeyId": {
+			"type": "string",
+			"defaultValue": "AKIAJDWDPZ7ZS4HRC73A"
+		},
+		"containerUri": {
+			"type": "string",
+			"metadata": "URI to storage account containing linked ARM templates"
+		},
+		"containerSasToken": {
+			"type": "string",
+			"metadata": "Sas token to storage account containing linked ARM templates"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "adf-ctg_ArmTemplate_0",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-02-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_0.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"ctg_ak_adf_secretAccessKey": {
+						"value": "[parameters('ctg_ak_adf_secretAccessKey')]"
+					},
+					"ctg_move_from_s3_connectionString": {
+						"value": "[parameters('ctg_move_from_s3_connectionString')]"
+					},
+					"ctg_ak_adf_properties_typeProperties_accessKeyId": {
+						"value": "[parameters('ctg_ak_adf_properties_typeProperties_accessKeyId')]"
+					}
+				}
+			},
+			"dependsOn": []
+		}
+	]
+}
