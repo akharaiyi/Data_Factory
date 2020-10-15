@@ -13,7 +13,16 @@
 					"secureOutput": false,
 					"secureInput": false
 				},
-				"userProperties": [],
+				"userProperties": [
+					{
+						"name": "Source",
+						"value": "ctg-ak-dev-12//"
+					},
+					{
+						"name": "Destination",
+						"value": "myfolder//"
+					}
+				],
 				"typeProperties": {
 					"source": {
 						"type": "BinarySource",
