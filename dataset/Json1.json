@@ -1,0 +1,418 @@
+{
+	"name": "Json1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ctg_ak_adf",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AmazonS3Location",
+				"bucketName": "ctg-ak-dev-12"
+			}
+		},
+		"schema": {
+			"type": "object",
+			"properties": {
+				"Reservations": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"properties": {
+							"Groups": {
+								"type": "array"
+							},
+							"Instances": {
+								"type": "array",
+								"items": {
+									"type": "object",
+									"properties": {
+										"AmiLaunchIndex": {
+											"type": "integer"
+										},
+										"ImageId": {
+											"type": "string"
+										},
+										"InstanceId": {
+											"type": "string"
+										},
+										"InstanceType": {
+											"type": "string"
+										},
+										"KeyName": {
+											"type": "string"
+										},
+										"LaunchTime": {
+											"type": "string"
+										},
+										"Monitoring": {
+											"type": "object",
+											"properties": {
+												"State": {
+													"type": "string"
+												}
+											}
+										},
+										"Placement": {
+											"type": "object",
+											"properties": {
+												"AvailabilityZone": {
+													"type": "string"
+												},
+												"GroupName": {
+													"type": "string"
+												},
+												"Tenancy": {
+													"type": "string"
+												}
+											}
+										},
+										"PrivateDnsName": {
+											"type": "string"
+										},
+										"PrivateIpAddress": {
+											"type": "string"
+										},
+										"ProductCodes": {
+											"type": "array"
+										},
+										"PublicDnsName": {
+											"type": "string"
+										},
+										"State": {
+											"type": "object",
+											"properties": {
+												"Code": {
+													"type": "integer"
+												},
+												"Name": {
+													"type": "string"
+												}
+											}
+										},
+										"StateTransitionReason": {
+											"type": "string"
+										},
+										"SubnetId": {
+											"type": "string"
+										},
+										"VpcId": {
+											"type": "string"
+										},
+										"Architecture": {
+											"type": "string"
+										},
+										"BlockDeviceMappings": {
+											"type": "array",
+											"items": {
+												"type": "object",
+												"properties": {
+													"DeviceName": {
+														"type": "string"
+													},
+													"Ebs": {
+														"type": "object",
+														"properties": {
+															"AttachTime": {
+																"type": "string"
+															},
+															"DeleteOnTermination": {
+																"type": "boolean"
+															},
+															"Status": {
+																"type": "string"
+															},
+															"VolumeId": {
+																"type": "string"
+															}
+														}
+													}
+												}
+											}
+										},
+										"ClientToken": {
+											"type": "string"
+										},
+										"EbsOptimized": {
+											"type": "boolean"
+										},
+										"EnaSupport": {
+											"type": "boolean"
+										},
+										"Hypervisor": {
+											"type": "string"
+										},
+										"NetworkInterfaces": {
+											"type": "array",
+											"items": {
+												"type": "object",
+												"properties": {
+													"Attachment": {
+														"type": "object",
+														"properties": {
+															"AttachTime": {
+																"type": "string"
+															},
+															"AttachmentId": {
+																"type": "string"
+															},
+															"DeleteOnTermination": {
+																"type": "boolean"
+															},
+															"DeviceIndex": {
+																"type": "integer"
+															},
+															"Status": {
+																"type": "string"
+															}
+														}
+													},
+													"Description": {
+														"type": "string"
+													},
+													"Groups": {
+														"type": "array",
+														"items": {
+															"type": "object",
+															"properties": {
+																"GroupName": {
+																	"type": "string"
+																},
+																"GroupId": {
+																	"type": "string"
+																}
+															}
+														}
+													},
+													"Ipv6Addresses": {
+														"type": "array"
+													},
+													"MacAddress": {
+														"type": "string"
+													},
+													"NetworkInterfaceId": {
+														"type": "string"
+													},
+													"OwnerId": {
+														"type": "string"
+													},
+													"PrivateDnsName": {
+														"type": "string"
+													},
+													"PrivateIpAddress": {
+														"type": "string"
+													},
+													"PrivateIpAddresses": {
+														"type": "array",
+														"items": {
+															"type": "object",
+															"properties": {
+																"Primary": {
+																	"type": "boolean"
+																},
+																"PrivateDnsName": {
+																	"type": "string"
+																},
+																"PrivateIpAddress": {
+																	"type": "string"
+																}
+															}
+														}
+													},
+													"SourceDestCheck": {
+														"type": "boolean"
+													},
+													"Status": {
+														"type": "string"
+													},
+													"SubnetId": {
+														"type": "string"
+													},
+													"VpcId": {
+														"type": "string"
+													},
+													"InterfaceType": {
+														"type": "string"
+													}
+												}
+											}
+										},
+										"RootDeviceName": {
+											"type": "string"
+										},
+										"RootDeviceType": {
+											"type": "string"
+										},
+										"SecurityGroups": {
+											"type": "array",
+											"items": {
+												"type": "object",
+												"properties": {
+													"GroupName": {
+														"type": "string"
+													},
+													"GroupId": {
+														"type": "string"
+													}
+												}
+											}
+										},
+										"SourceDestCheck": {
+											"type": "boolean"
+										},
+										"StateReason": {
+											"type": "object",
+											"properties": {
+												"Code": {
+													"type": "string"
+												},
+												"Message": {
+													"type": "string"
+												}
+											}
+										},
+										"Tags": {
+											"type": "array",
+											"items": {
+												"type": "object",
+												"properties": {
+													"Key": {
+														"type": "string"
+													},
+													"Value": {
+														"type": "string"
+													}
+												}
+											}
+										},
+										"VirtualizationType": {
+											"type": "string"
+										},
+										"CpuOptions": {
+											"type": "object",
+											"properties": {
+												"CoreCount": {
+													"type": "integer"
+												},
+												"ThreadsPerCore": {
+													"type": "integer"
+												}
+											}
+										},
+										"CapacityReservationSpecification": {
+											"type": "object",
+											"properties": {
+												"CapacityReservationPreference": {
+													"type": "string"
+												}
+											}
+										},
+										"HibernationOptions": {
+											"type": "object",
+											"properties": {
+												"Configured": {
+													"type": "boolean"
+												}
+											}
+										},
+										"MetadataOptions": {
+											"type": "object",
+											"properties": {
+												"State": {
+													"type": "string"
+												},
+												"HttpTokens": {
+													"type": "string"
+												},
+												"HttpPutResponseHopLimit": {
+													"type": "integer"
+												},
+												"HttpEndpoint": {
+													"type": "string"
+												}
+											}
+										}
+									}
+								}
+							},
+							"OwnerId": {
+								"type": "string"
+							},
+							"ReservationId": {
+								"type": "string"
+							}
+						}
+					}
+				},
+				"ulid": {
+					"type": "string"
+				},
+				"minTime": {
+					"type": "integer"
+				},
+				"maxTime": {
+					"type": "integer"
+				},
+				"stats": {
+					"type": "object",
+					"properties": {
+						"numSamples": {
+							"type": "integer"
+						},
+						"numSeries": {
+							"type": "integer"
+						},
+						"numChunks": {
+							"type": "integer"
+						}
+					}
+				},
+				"compaction": {
+					"type": "object",
+					"properties": {
+						"level": {
+							"type": "integer"
+						},
+						"sources": {
+							"type": "array",
+							"items": {
+								"type": "string"
+							}
+						}
+					}
+				},
+				"version": {
+					"type": "integer"
+				},
+				"Version": {
+					"type": "string"
+				},
+				"Statement": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"properties": {
+							"Effect": {
+								"type": "string"
+							},
+							"Action": {
+								"type": "array",
+								"items": {
+									"type": "string"
+								}
+							},
+							"Resource": {
+								"type": "array",
+								"items": {
+									"type": "string"
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
